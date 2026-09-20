@@ -1,0 +1,6 @@
+{
+  "name": "李誌恩精品包包",
+  "description": "Material 3 Expressive 李誌恩名牌包包線上購物與創作工坊",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
