@@ -22,9 +22,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      # GitHub Runner 內建 Android SDK，直接自動同意授權協議即可
+      - name: Accept Android SDK Licenses
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
+      # 還原 debug.keystore
       - name: Restore Debug Keystore
         run: |
           if [ ! -f debug.keystore ] && [ -f debug.keystore.base64 ]; then
